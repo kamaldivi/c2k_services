@@ -1,4 +1,4 @@
-package org.gokulbhajan.c2k;
+package org.gokulbhajan.c2k.dao;
 
 import org.gokulbhajan.c2k.model.Habit;
 import org.springframework.data.repository.PagingAndSortingRepository;

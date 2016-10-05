@@ -9,6 +9,8 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 //import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 /**
  * The persistent class for the media_category database table.
@@ -24,6 +26,7 @@ public class MediaCategory implements Serializable {
 	@Column(name="category_id")
 	private int categoryId;
 
+	@JsonIgnore
 	private String description;
 
 	private String name;

@@ -1,4 +1,4 @@
-package org.gokulbhajan.c2k;
+package org.gokulbhajan.c2k.dao;
 
 import java.util.List;
 

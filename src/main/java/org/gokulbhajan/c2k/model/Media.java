@@ -3,6 +3,8 @@ package org.gokulbhajan.c2k.model;
 import java.io.Serializable;
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.Date;
 import java.sql.Timestamp;
 import java.util.List;
@@ -14,7 +16,7 @@ import java.util.List;
  */
 @Entity
 @NamedQueries({ @NamedQuery(name = "Media.findAll", query = "SELECT m FROM Media m"),
-	@NamedQuery(name = "Media.findByType", query = "SELECT m FROM Media m where m.type=? ") })
+	@NamedQuery(name = "Media.findByType", query = "SELECT m FROM Media m where m.type = :type ") })
 public class Media implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -35,6 +37,7 @@ public class Media implements Serializable {
 	@Column(name="image_url")
 	private String imageUrl;
 
+	@JsonIgnore
 	@Column(name="last_update")
 	private Timestamp lastUpdate;
 
